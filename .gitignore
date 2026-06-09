@@ -1,0 +1,26 @@
+# Never commit these: live session cookies would leak your account
+cookies.txt
+*.cookies
+.env
+
+# Runtime output and caches
+out/
+models/
+frames/
+*.mp4
+*.wav
+*.webm
+*.m4a
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
