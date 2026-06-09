@@ -5,6 +5,9 @@ the spoken words, any on-screen text, and an optional summary as Markdown.
 Runs natively or as a portable container, fully on your own machine. No cloud
 services required.
 
+It works with any site yt-dlp supports, including TikTok, Instagram, YouTube,
+and Facebook.
+
 ## What it does
 
 1. Downloads the video with yt-dlp
