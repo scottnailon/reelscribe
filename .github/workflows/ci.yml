@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile-check the script
+        run: python -m py_compile reelscribe.py
+
+      - name: Lint with ruff
+        run: |
+          pip install ruff
+          ruff check reelscribe.py
+
+      - name: Syntax-check the shell wrapper
+        run: bash -n run.sh
